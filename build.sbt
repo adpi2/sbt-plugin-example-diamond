@@ -12,8 +12,7 @@ inThisBuild(
         connection = "https://github.com/adpi2/sbt-plugin-example-diamond.git"
       )
     ),
-    scalaVersion := "2.12.17",
-    version := "0.1.0"
+    scalaVersion := "2.12.17"
   )
 )
 
