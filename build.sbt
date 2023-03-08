@@ -31,8 +31,7 @@ lazy val diamond = project
     description :=
       """|An empty artifact that we use to test resolving a diamond graph of dependencies of sbt plugins.
          |This is the top dependency of the diamond. It depends on sbt-plugin-example-left and sbt-plugin-example-right.
-         """.stripMargin,
-    packagedArtifacts := oldStyleArtifacts.value
+         """.stripMargin
   )
   .dependsOn(left, right)
 
@@ -57,7 +56,6 @@ lazy val right = project
       """|An empty artifact that we use to test resolving a diamond graph of dependencies of sbt plugins.
          |This is the right dependency of the diamond. It depends on sbt-plugin-example-bottom.
       """.stripMargin,
-    packagedArtifacts := oldStyleArtifacts.value,
     addSbtPlugin("ch.epfl.scala" % "sbt-plugin-example-bottom" % "0.7.0")
   )
 
