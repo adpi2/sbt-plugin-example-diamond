@@ -57,9 +57,9 @@ lazy val right = project
       """|An empty artifact that we use to test resolving a diamond graph of dependencies of sbt plugins.
          |This is the right dependency of the diamond. It depends on sbt-plugin-example-bottom.
       """.stripMargin,
-    packagedArtifacts := oldStyleArtifacts.value
+    packagedArtifacts := oldStyleArtifacts.value,
+    addSbtPlugin("ch.epfl.scala" % "sbt-plugin-example-bottom" % "0.7.0")
   )
-  .dependsOn(bottom)
 
 lazy val bottom = project
   .in(file("bottom"))
@@ -69,8 +69,7 @@ lazy val bottom = project
     description :=
       """|An empty artifact that we use to test resolving a diamond graph of dependencies of sbt plugins.
          |This is the bottom dependency of the diamond.
-      """.stripMargin,
-    packagedArtifacts := oldStyleArtifacts.value
+      """.stripMargin
   )
 
 def oldStyleArtifacts: Def.Initialize[Task[Map[Artifact, File]]] =
