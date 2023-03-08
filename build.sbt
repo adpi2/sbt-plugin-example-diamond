@@ -44,8 +44,7 @@ lazy val left = project
     description :=
       """|An empty artifact that we use to test resolving a diamond graph of dependencies of sbt plugins.
          |This is the left dependency of the diamond. It depends on sbt-plugin-example-bottom.
-      """.stripMargin,
-    packagedArtifacts := oldStyleArtifacts.value
+      """.stripMargin
   )
   .dependsOn(bottom)
 
