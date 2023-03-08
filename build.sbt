@@ -56,7 +56,7 @@ lazy val right = project
       """|An empty artifact that we use to test resolving a diamond graph of dependencies of sbt plugins.
          |This is the right dependency of the diamond. It depends on sbt-plugin-example-bottom.
       """.stripMargin,
-    addSbtPlugin("ch.epfl.scala" % "sbt-plugin-example-bottom" % "0.7.0")
+    addSbtPlugin("ch.epfl.scala" % "sbt-plugin-example-bottom" % "0.9.0")
   )
 
 lazy val bottom = project
